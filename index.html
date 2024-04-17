@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Website</title>
+   
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        background-color: white;
+        padding: 50px;
+    }
+    
+    .NAV {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: bold;
+    }
+    
+    .left-nav {
+        display: flex;
+        align-items: center;
+        margin-left: 200px;
+    }
+    
+    .right-nav {
+        display: flex;
+        align-items: center;
+        margin-right: 200px;
+    }
+    
+    .NAV-item {
+        margin-right: 20px;
+        margin-left: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .right-nav .NAV-item:last-child {
+        border-left: 1px solid #ccc;
+        padding-left: 20px;
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+    
+    .right-nav .NAV-item:last-child img {
+        width: 40px; /* Adjust the width as desired */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px;
+    }
+    
+    /* Added margin to the right of "Sign In" */
+    .right-nav .NAV-item:last-child .sign-in {
+        margin-right: 10px; /* Adjust the margin as needed */
+    }
+    .right-nav .sign-in a {
+        color: #333; /* Text color */
+        font-weight: bold; /* Bold text */
+        text-decoration: none; /* Remove underline */
+        padding: 10px 20px; /* Padding */
+        
+        transition: background-color 0.3s ease; /* Smooth transition */}
+        order-section {
+        background-color: black;
+        border-radius: 20px;
+        padding: 40px;
+        color: white;
+        display: inline-block;
+    }
+    
+    .order-text {
+        font-weight: 900;
+        margin-bottom: 0px;
+        padding: 20px;
+        background-color: black;
+        text-align: center;
+        color: white;
+    }
+    
+    .start-order {
+        background-color: rgb(212, 8, 8);
+        color: white;
+        font-weight:100;
+        padding: 10px 40px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        margin-left: 20px;
+    }
+    .main {
+        width: 100%; /* Make image fill entire width */
+        height: auto; /* Maintain aspect ratio */
+      margin-top: 0%;
+        display: block;}
+        .h1{font-size: larger;
+        font-weight:bolder;
+    text-align: justify;
+    color: black;}
+    
+    .browse-categories {
+    text-align: justify;
+    margin-top: 60px; /* Adjust the margin to align with top margin line */
+    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-left: 200px;
+    position: relative; /* Add relative positioning */
+    font-size: xx-large;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .horizontal-line {
+    position: absolute;
+    bottom:57px; /* Adjust the position if needed */
+    left: 555px; /* Adjust left position as needed */
+    width: 55%; /* Adjust width as needed */
+    border-bottom: 1px solid rgb(168, 166, 166);
+    
+    }
+    .container {
+    padding-top:20px; /* Add padding */
+    padding-left: 200px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: auto;
+    width:fit-content;
+    margin-top: 20px;
+    
+    }
+    .container>div{
+    
+    text-align: center;
+    width:fixed;
+    height:fit-content;
+    background-color: #f7f5f5;
+    }
+    .container>div>img{
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    }
+    .container>div>p>b{
+    font-size: 15px;
+    font-weight: bold;}
+    .container>div>img.more{width: 75%;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right:15px;
+    margin-bottom: 56px;
+    }
+    .foot{padding: auto; /* Add padding */
+    padding-left:0px;
+    padding-right:0px;
+    height: auto;
+    width: auto;
+    background-color:black;
+    }
+    .foot>h3{
+    font-size: xx-large;
+    color: white;
+    padding-top:100px; /* Add padding */
+    padding-left:200px;
+    padding-right: 100px;
+    font-weight: 900;
+    
+    }
+    
+    .scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    padding-top:50px; /* Add padding */
+    padding-left:200px;
+    padding-right: 100px;
+    
+    
+    }
+    
+    .box {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    }
+    
+    .box-content {
+    width: 200px;
+    height: auto;
+    background-color: #bb1616;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    }
+    
+    .text-content {
+    text-align: center;
+    
+    }
+    
+    .text-content h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+    color:white;
+    }
+    
+    .text-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+    display:grid; /* Ensure each paragraph is displayed on a separate line */
+    color:white;
+    overflow: hidden;
+    }
+    
+    .box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    }
+    .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #f0f0f0;
+    padding-top:200px; /* Add padding */
+    padding-left:100px;
+    padding-right:50px;
+    font-size: large;
+    font-weight: bolder;
+    
+    
+    
+    }
+    
+    .footer-section {
+    margin-right: 0px;
+    }
+    
+    
+    
+    .footer-text {
+    margin-bottom: 5px;
+    font-size: 14px;
+    }
+    
+    .footer-text a {
+    color: #333;
+    text-decoration: none;
+    }
+    
+    .footer-text a:hover {
+    text-decoration: underline;
+    }
+    
+    .copyright {
+    margin-top: 40px;
+    text-align: center;
+    font-size:small;
+    color: white;
+    font-weight: normal;
+    }
+    
+    .social-icons {
+    text-align: right;
+    margin-top: 20px;
+    }
+    
+    .social-icons img {
+    width: 30px;
+    margin-right: 10px;
+    }
+    /* For screens smaller than 768px */
+    @media screen and (max-width: 768px) {
+    .left-nav {
+    margin-left: 20px;
+    }
+    
+    .right-nav {
+    margin-right: 20px;
+    }
+    
+    .NAV-item {
+    margin-right: 10px;
+    margin-left: 20px;
+    }
+    
+    .right-nav .NAV-item:last-child {
+    margin-right: 20px;
+    margin-left: 20px;
+    }
+    
+    .browse-categories {
+    margin-left: 20px;
+    }
+    
+    .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .foot {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    
+    .scroll-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    
+    .footer-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+    }
+    
+    /* For screens smaller than 480px */
+    @media screen and (max-width: 480px) {
+    .NAV {
+    flex-direction: column;
+    }
+    
+    .left-nav, .right-nav {
+    justify-content: center;
+    margin: 0;
+    }
+    
+    .NAV-item {
+    margin: 10px 0;
+    }
+    
+    .right-nav .NAV-item:last-child {
+    border-left: none;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+    }
+    
+    .order-text {
+    padding: 10px;
+    }
+    
+    .browse-categories {
+    margin-left: 10px;
+    }
+    
+    .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .foot {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    
+    .scroll-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    
+    .footer-container {
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+    }
+    </style>
+    <body>
+    <header>
+        <nav class="NAV">
+            <div class="left-nav">
+                <img src="IMG/kfcLogo.492728c6.jpg" alt="KFC Logo" style="height: 40px;">
+                <div class="NAV-item">Menu</div>
+                <div class="NAV-item">Deals</div>
+            </div>
+            <div class="right-nav">
+                <div class="NAV-item sign-in" style="margin-right: 10px;"><img src="IMG/Account_Icon.JPG.jpg"style="width: 35px; height: auto;margin-right: 10px;">Sign In</a></div>
+                <div class="NAV-item" style="margin-right: 10px;">₹0<img src="IMG/bucket_cart_icon.png" style="margin-left: 5px;"></div>
+            </div>
+        </nav>
+    </header>
+    <div class="order-section">
+        <p class="order-text">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN <button class="start-order">Start Order</button></p>
+        
+    </div>
+    <img class="main"src ="IMG/POSTER.webp">
+    <section class="main-content">
+        <section class="main-content"><h2 class="browse-categories">BROWSE CATEGORIES</h2>
+            <hr class="horizontal-line">
+        
+    </section>
+    <div class="container">
+        <div>
+            <img src="IMG/PERI PERI.jpg">
+            <p><b>PERI PERI CHICKEN</b></p>
+            </div>
+        <div>
+            <img src="IMG/SNAKS.jpg">
+            <p><b>VALUE SNACKERS</b></p>
+            </div>
+        <div>
+            <img src="IMG/ROLLS.jpg">
+            <p><b>CHICKEN ROLLS</b></p>
+            </div>
+        <div>
+            <img src="IMG/CHICKEN BUCKETS.jpg">
+            <p><b>CHICKEN BUCKETS</b></p>
+        
+        </div>
+        <div>
+            <img src="IMG/CHICKEN BIRIYANI.jpg">
+            <p><b>CHICKEN BIRIYANI</b></p>
+            </div>
+        <div>
+            <img src="IMG/BOX MEALS.jpg">
+            <p><b>BOX MEALS</b></p>
+        </div>
+        <div>
+            <img src="IMG/BURGERS.jpg">
+            <p><b>BURGERS</b></p>
+            </div>
+        <div>
+            <img class="more" src="IMG/finger_lickin.fc21c805.png">
+            <p><b>View All Menu</b></p>
+         </div></div>
+         <div class="foot">
+            <h3>OFFERS & DEALS</h3>
+         <div class="scroll-container">
+            <div class="box">
+                <div class="box-content">
+                    <img src="IMG/CHKZINGER.jpg" alt="Image 1">
+                    <div class="text-content">
+                        <h2>FREE CHICKEN</h2>
+                        <p>1 Pc free Chicken Zinger on a cart value of 499 or above on first order. Only for registered users.</p>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <img src="IMG/ADDCHK99.jpg" alt="Image 2">
+                    <div class="text-content">
+                        <h2>ADD 2PC HOT N...</h2>
+                        <p>Add 2 Pc Hot n Crispy Chicken at just Rs 99 on min cart value of Rs 499 or more. Applicable on 2nd & 3rd order for signed in user.</p>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <img src="IMG/BIGSAVE.jpg" alt="Image 3">
+                    <div class="text-content">
+                        <h2>UPTO RS 100 OFF 0...</h2>
+                        <p>Upto Rs 100 off on min cart value of Rs 699 or more . Applicable on 4th order onwards for signed in user.</p>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <img src="IMG/PHP75.jpg" alt="Image 4">
+                    <div class="text-content">
+                        <h2>GET FLAT RS.75 OF...</h2>
+                        <p>Get flat Rs.75 off on a cart value of 599 or above</p>
+                    </div>
+                </div>
+            </div></div>
+            
+                <div class="footer-container">
+                    <img src="IMG/KFC_Logo (1).jpg" alt="KFC Logo" style="height: 40px;">
+                    <div class="footer-section">  
+                        <p class="footer-text">Legal</p>
+                        <p class="footer-text">Terms and Conditions</p>
+                        <p class="footer-text">Privacy Policy</p>
+                        <p class="footer-text">Disclaimer</p>
+                        <p class="footer-text">Caution Notice</p></div>
+                        <div class="footer-section">
+                        <p class="footer-text">KFC India</p>
+                        <p class="footer-text">About KFC</p>
+                        <p class="footer-text">KFC Care</p>
+                        <p class="footer-text">Careers</p>
+                        <p class="footer-text">Our Golden Past</p>
+                    </div>
+                    <div class="footer-section">
+                        <p class="footer-text">KFC Food</p>
+                        <p class="footer-text">Menu</p>
+                        <p class="footer-text">Order Lookup</p>
+                        <p class="footer-text">Gift Card</p>
+                        <p class="footer-text">Nutrition & Allergen</p>
+                    </div>
+                    <div class="footer-section">
+                        <p class="footer-text">Support</p>
+                        <p class="footer-text">Get Help</p>
+                        <p class="footer-text">Contact Us</p>
+                        <p class="footer-text">KFC Feedback</p>
+                        <p class="footer-text">Privacy Policy</p></div>
+                        <div class="footer-section">
+                        <p class="footer-text">Find a KFC</p>
+                    </div>
+                    <div class="footer-section">
+                        <p class="footer-text"><img src="IMG/google_play.png" style="width: 100px; height: auto;"></p>
+                    </div>
+                    <div class="footer-section">
+                        <p class="footer-text"><img src="IMG/apple.png" style="width: 100px; height: auto;"></p>
+                    </div>
+                    
+                </div>
+                
+                <div class="social-icons">
+                    <p class="copyright">Copyright © KFC Corporation 2024 All Rights Reserved</p>
+                    <img src="IMG/Social_Insta_White.png" alt="Instagram">
+                    <img src="IMG/Social_Facebook_White.png" alt="Facebook">
+                    <img src="IMG/Social_Twitter_White.png" alt="Twitter">
+                </div>
+            
+        </div>
+        
+        
+   
+</body>
+</html>
